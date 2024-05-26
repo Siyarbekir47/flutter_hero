@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hero/shared/styled_text.dart';
+import 'package:flutter_hero/theme.dart';
 
 class CharacterCard extends StatelessWidget {
   const CharacterCard(this.character, {super.key});
@@ -14,6 +15,16 @@ class CharacterCard extends StatelessWidget {
         child: Row(
           children: [
             StyledBody(character),
+            const Expanded(
+              child: SizedBox(),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.arrow_forward,
+                color: AppColors.primary,
+              ),
+            ),
           ],
         ),
       ),
