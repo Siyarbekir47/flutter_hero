@@ -1,36 +1,28 @@
 enum Vocation {
   raider(
-    title: "Terminal Raider",
-    description:
-        "A raider who is always on the move, looking for the next big score.",
-    image: "terminal_raider.jpg",
-    weapon: "Terminal",
-    ability: "Shellshock",
-  ),
+      title: "Terminal Raider",
+      description: "Adept in terminal commands to trigger traps.",
+      weapon: "Terminal",
+      ability: "Shellshock",
+      image: "terminal_raider.jpg"),
   junkie(
-    title: "Tech Junkie",
-    description:
-        "A tech-savvy junkie who is addicted to the latest gadgets and technology.",
-    image: "tech_junkie.jpg",
-    weapon: "Gadgets",
-    ability: "Tech Overload",
-  ),
+      title: "Code Junkie",
+      description: "Uses code to infiltrate enemy defenses.",
+      weapon: "React 99",
+      ability: "Higher Order Overdrive",
+      image: "code_junkie.jpg"),
   ninja(
-    title: "Stealth Ninja",
-    description:
-        "A master of stealth and agility, capable of infiltrating any location undetected.",
-    image: "stealth_ninja.jpg",
-    weapon: "Shuriken",
-    ability: "Shadow Strike",
-  ),
+      title: "UX Ninja",
+      description: "Uses quick & stealthy visual attacks.",
+      weapon: "Infused Stylus",
+      ability: "Triple Swipe",
+      image: "ux_ninja.jpg"),
   wizard(
-    title: "Mystic Wizard",
-    description:
-        "A powerful wizard who harnesses the forces of magic to cast devastating spells.",
-    image: "mystic_wizard.jpg",
-    weapon: "Staff",
-    ability: "Arcane Blast",
-  );
+      title: "Algo Wizard",
+      description: "Carries a staff to unleash algorithm magic.",
+      weapon: "Crystal Staff",
+      ability: "Algorythmic Daze",
+      image: "algo_wizard.jpg");
 
   const Vocation({
     required this.title,
