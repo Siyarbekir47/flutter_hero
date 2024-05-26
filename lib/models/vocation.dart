@@ -3,7 +3,7 @@ enum Vocation {
     title: "Terminal Raider",
     description:
         "A raider who is always on the move, looking for the next big score.",
-    image: "termina_raider.jpg",
+    image: "terminal_raider.jpg",
     weapon: "Terminal",
     ability: "Shellshock",
   ),
