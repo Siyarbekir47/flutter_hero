@@ -1,6 +1,3 @@
-import 'dart:collection';
-import 'dart:ffi';
-
 import 'package:flutter_hero/models/stats.dart';
 
 class Character with Stats {
