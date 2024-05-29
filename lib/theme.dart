@@ -60,4 +60,19 @@ ThemeData primaryTheme = ThemeData(
     shadowColor: Colors.transparent,
     margin: const EdgeInsets.only(bottom: 16),
   ),
+
+//input decoration Theme
+
+  inputDecorationTheme: InputDecorationTheme(
+    fillColor: AppColors.surface.withOpacity(0.8),
+    filled: true,
+    border: const OutlineInputBorder(),
+    labelStyle: const TextStyle(
+      color: AppColors.onSurface,
+    ),
+    prefixIconColor: AppColors.onSurface,
+  ),
 );
+
+
+//
