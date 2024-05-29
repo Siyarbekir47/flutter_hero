@@ -5,6 +5,7 @@ import 'package:flutter_hero/shared/styled_button.dart';
 import 'package:flutter_hero/shared/styled_text.dart';
 import 'package:flutter_hero/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_hero/models/character.dart';
 
 class Create extends StatefulWidget {
   const Create({super.key});
@@ -41,6 +42,18 @@ class _CreateState extends State<Create> {
     if (_nameController.text.trim().isEmpty ||
         _sloganController.text.trim().isEmpty) {
       return;
+    } else {
+      setState(() {
+        characters.add(
+          Character(
+            name: _nameController.text,
+            slogan: _sloganController.text,
+            vocation: selectedVocation,
+            id: DateTime.now().toString(),
+          ),
+        );
+      });
+      Navigator.pop(context, characters);
     }
   }
 
