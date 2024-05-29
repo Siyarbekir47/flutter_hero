@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hero/models/character.dart';
+import 'package:flutter_hero/screens/create/create.dart';
 import 'package:flutter_hero/screens/home/character_card.dart';
 import 'package:flutter_hero/shared/styled_button.dart';
 import 'package:flutter_hero/shared/styled_text.dart';
@@ -32,7 +33,14 @@ class _HomeState extends State<Home> {
               ),
             ),
             StyledButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Create(),
+                  ),
+                );
+              },
               child: const StyledBody("Create New"),
             ),
           ],

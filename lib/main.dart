@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hero/screens/create/create.dart';
 import 'package:flutter_hero/screens/home/home.dart';
 import 'package:flutter_hero/theme.dart';
 
 void main() {
   runApp(MaterialApp(
     theme: primaryTheme,
-    home: Create(),
+    home: const Home(),
   ));
 }
 

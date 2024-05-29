@@ -19,8 +19,6 @@ class _CreateState extends State<Create> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
-
     _nameController.dispose();
     _sloganController.dispose();
     super.dispose();
@@ -31,30 +29,33 @@ class _CreateState extends State<Create> {
   Vocation selectedVocation = Vocation.junkie;
 
   void updateVocation(Vocation vocation) {
-    setState(() {
-      selectedVocation = vocation;
-    });
+    setState(
+      () {
+        selectedVocation = vocation;
+      },
+    );
   }
 
   //submit handler
   void handleSubmit() {
     if (_nameController.text.trim().isEmpty ||
         _sloganController.text.trim().isEmpty) {
-      print("name must not be empty");
       return;
     }
-
-    print(_nameController.text);
-    print(_sloganController.text);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const StyledTitle("Character Creation"),
-          centerTitle: true,
-        ),
+            title: const StyledTitle("Character Creation"),
+            centerTitle: true,
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            )),
         body: Container(
           padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
           child: SingleChildScrollView(
