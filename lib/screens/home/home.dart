@@ -33,13 +33,18 @@ class _HomeState extends State<Home> {
               ),
             ),
             StyledButton(
-              onPressed: () {
-                Navigator.push(
+              onPressed: () async {
+                final updatedCharacters = await Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const Create(),
                   ),
                 );
+                if (updatedCharacters != null) {
+                  setState(() {
+                    characters = updatedCharacters;
+                  });
+                }
               },
               child: const StyledBody("Create New"),
             ),
