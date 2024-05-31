@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hero/models/character.dart';
+import 'package:flutter_hero/screens/details/details.dart';
 import 'package:flutter_hero/shared/styled_text.dart';
 import 'package:flutter_hero/theme.dart';
 
@@ -31,7 +32,15 @@ class CharacterCard extends StatelessWidget {
               child: SizedBox(),
             ),
             IconButton(
-              onPressed: () {},
+              //redirect to details page
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Details(),
+                  ),
+                );
+              },
               icon: const Icon(
                 Icons.arrow_forward,
                 color: AppColors.primary,
